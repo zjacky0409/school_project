@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="6dp">
+
+    <TextView
+        android:id="@+id/event"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="2"
+        android:text="Event"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/changeDetail"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/ic_baseline_create_24" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/design_default_color_error"
+        android:drawableLeft="@drawable/delete_btn" />
+
+
+
+</LinearLayout>

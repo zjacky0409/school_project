@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowDetailFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="210dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/description_sd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="description" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7"
+        tools:layout_editor_absoluteX="160dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cal_burn_sd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="cal_burn" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
+        tools:layout_editor_absoluteX="154dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/period_sd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="period" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"
+        tools:layout_editor_absoluteX="175dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/remark_sd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="remark" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout10">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/start_time_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="starting time" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout11">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/end_time_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="end time" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/goToWeb"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:text="Go To Web Resources"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout12" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

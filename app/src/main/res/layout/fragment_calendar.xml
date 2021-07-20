@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CalendarFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/myDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_horizontal"
+            android:text="Select A Date"
+            android:textColor="#000"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_calen"
+            app:layout_constraintTop_toBottomOf="@+id/myDate">
+
+            <CalendarView
+                android:id="@+id/calenderView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></CalendarView>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Check Event"
+            android:textColor="#FFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+

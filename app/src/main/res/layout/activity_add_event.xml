@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".AddEventActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="151dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        tools:layout_editor_absoluteX="68dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Period (Mins)" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        tools:layout_editor_absoluteX="179dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cal_burn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calories Burn" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        tools:layout_editor_absoluteX="200dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location" />
+
+        <Button
+            android:id="@+id/goToMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="goToMap"
+            android:text="current location" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+        tools:layout_editor_absoluteX="197dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="remark" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reset"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout9" />
+
+    <TextView
+        android:id="@+id/start_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:drawablePadding="16dp"
+        android:gravity="center"
+        android:hint="start_time"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="starting time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        android:text="end time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_timer" />
+
+    <TextView
+        android:id="@+id/end_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:drawablePadding="16dp"
+        android:gravity="center"
+        android:hint="end_time"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/save"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout9" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/end_timer"
+        tools:layout_editor_absoluteX="191dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/WebLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Web link"
+            android:inputType="textUri" />
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EventDetailActivity">
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/show_detail_fragment"-->
+    <!--        android:name="edu.cuhk.csci3310.project.ShowDetailFragment"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="225dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--    </FrameLayout>-->
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="416dp"
+        android:layout_height="227dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/show_detail_fragment"
+                android:name="edu.cuhk.csci3310.project.ShowDetailFragment"
+                android:layout_width="411dp"
+                android:layout_height="400dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/map_fragment"
+        android:name="edu.cuhk.csci3310.project.MapsFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/setAlarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/setAlarm"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:insetTop="6dp"
+        android:insetBottom="0dp"
+        android:text="Set Alarm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
